@@ -8,14 +8,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Page"),
+        title: const Text("Home Page"),
       ),
       body: Center(
-        child: Container(
-          child: Text("Hello Welcome to $days dart project by $name"),
-        ),
+        child: Text("Hello Welcome to $days dart project by $name"),
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }
