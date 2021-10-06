@@ -19,12 +19,21 @@ class MyApp extends StatelessWidget {
       // home: HomeClass(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily),
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        appBarTheme: const AppBarTheme(
+          color: Colors.white,
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.black),
+          // ignore: deprecated_member_use
+          // textTheme: Theme.of(context). ,
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       initialRoute: "/login",
       routes: {
         "/": (context) => LoginPage(),
+        // ignore: prefer_const_constructors
         MyRoutes.homeRoutes: (context) => HomePage(),
         MyRoutes.loginRoutes: (context) => LoginPage(),
       },
