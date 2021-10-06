@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "id": "Abhi001",
+            "name": "iPhone 12",
+            "desc": "Apple iPhone 12th generation",
+            "price": 999,
+            "color": "#33505a",
+            "image": "https://m.media-amazon.com/images/I/71MHTD3uL4L._SL1500_.jpg"
+        },
+        {
+            "id": "Abhi002",
+            "name": "OnePlus 8T",
+            "desc": "OnePlus 8T full hd display",
+            "price": 999,
+            "color": "#33505a",
+            "image": "https://m.media-amazon.com/images/I/61LvUvbZGlL._SL1500_.jpg"
+        },
+        {
+            "id": "Abhi003",
+            "name": "iQOO 9",
+            "desc": "iQOO 9th generation",
+            "price": 999,
+            "color": "#33505a",
+            "image": "https://m.media-amazon.com/images/I/51LOXKT+vvL._SL1200_.jpg"
+        },
+        {
+            "id": "Abhi004",
+            "name": "iPhone 12",
+            "desc": "Apple iPhone 12th generation",
+            "price": 999,
+            "color": "#33505a",
+            "image": "https://m.media-amazon.com/images/I/71MHTD3uL4L._SL1500_.jpg"
+        },
+        {
+            "id": "Abhi005",
+            "name": "OnePlus 8T",
+            "desc": "OnePlus 8T full hd display",
+            "price": 999,
+            "color": "#33505a",
+            "image": "https://m.media-amazon.com/images/I/61LvUvbZGlL._SL1500_.jpg"
+        },
+        {
+            "id": "Abhi006",
+            "name": "iQOO 9",
+            "desc": "iQOO 9th generation",
+            "price": 999,
+            "color": "#33505a",
+            "image": "https://m.media-amazon.com/images/I/51LOXKT+vvL._SL1200_.jpg"
+        }
+    ]
+}
