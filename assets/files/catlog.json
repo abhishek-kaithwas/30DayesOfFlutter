@@ -4,7 +4,7 @@
             "id": 1,
             "name": "iPhone 12",
             "desc": "Apple iPhone 12th generation",
-            "price": 999,
+            "price": 6546,
             "color": "#33505a",
             "image": "https://m.media-amazon.com/images/I/71MHTD3uL4L._SL1500_.jpg"
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "name": "OnePlus 8T",
             "desc": "OnePlus 8T full hd display",
-            "price": 999,
+            "price": 1110,
             "color": "#33505a",
             "image": "https://m.media-amazon.com/images/I/61LvUvbZGlL._SL1500_.jpg"
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "name": "iQOO 9",
             "desc": "iQOO 9th generation",
-            "price": 999,
+            "price": 569,
             "color": "#33505a",
             "image": "https://m.media-amazon.com/images/I/51LOXKT+vvL._SL1200_.jpg"
         },
@@ -28,7 +28,7 @@
             "id": 4,
             "name": "iPhone 12",
             "desc": "Apple iPhone 12th generation",
-            "price": 999,
+            "price": 1200,
             "color": "#33505a",
             "image": "https://m.media-amazon.com/images/I/71MHTD3uL4L._SL1500_.jpg"
         },
@@ -36,7 +36,7 @@
             "id": 5,
             "name": "OnePlus 8T",
             "desc": "OnePlus 8T full hd display",
-            "price": 999,
+            "price": 888,
             "color": "#33505a",
             "image": "https://m.media-amazon.com/images/I/61LvUvbZGlL._SL1500_.jpg"
         },

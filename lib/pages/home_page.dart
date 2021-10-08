@@ -27,8 +27,6 @@ class _HomePageState extends State<HomePage> {
     await Future.delayed(const Duration(seconds: 2));
 
     var catlogJson = await rootBundle.loadString("assets/files/catlog.json");
-    // ignore: avoid_print
-    // print(catlogJson);
     var jsonDecodedData = jsonDecode(catlogJson);
     var productsData = jsonDecodedData["products"];
     CatalogModel.items =
@@ -51,12 +49,31 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(8.0),
         // ignore: unnecessary_null_comparison
         child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-            ? ListView.builder(
-                itemCount: CatalogModel.items.length,
+            ? GridView.builder(
+                // ignore: prefer_const_constructors
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 16,
+                    crossAxisSpacing: 16),
                 itemBuilder: (context, index) {
-                  return ItemWidget(item: CatalogModel.items[index]);
+                  final item = CatalogModel.items[index];
+                  return Card(
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: GridTile(
+                        header: Container(
+                            padding: EdgeInsets.all(12),
+                            decoration: BoxDecoration(color: Colors.deepPurple),
+                            child: Text(
+                              item.name,
+                              style: TextStyle(color: Colors.white ),
+                            )),
+                        child: Image.network(item.image),
+                        footer: Text(item.price.toString()),
+                      ));
                 },
-              )
+                itemCount: CatalogModel.items.length)
             : const Center(
                 child: CircularProgressIndicator(),
               ),
@@ -65,3 +82,10 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+// ListView.builder(
+//   itemCount: CatalogModel.items.length,
+//   itemBuilder: (context, index) {
+//     return ItemWidget(item: CatalogModel.items[index]);
+//   },
+// )
