@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
+        fontFamily: GoogleFonts.poppins().fontFamily,
         appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0,
@@ -32,10 +32,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: "/login",
       routes: {
-        "/": (context) => LoginPage(),
+        "/": (context) => const LoginPage(),
         // ignore: prefer_const_constructors
         MyRoutes.homeRoutes: (context) => HomePage(),
-        MyRoutes.loginRoutes: (context) => LoginPage(),
+        MyRoutes.loginRoutes: (context) => const LoginPage(),
       },
     );
   }
