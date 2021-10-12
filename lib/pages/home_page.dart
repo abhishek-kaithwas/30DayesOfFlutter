@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/drawer.dart';
 import 'package:flutter_application_1/models/catlog.dart';
-import 'package:flutter_application_1/widgets/item_widget.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 
@@ -63,14 +62,25 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(10)),
                       child: GridTile(
                         header: Container(
-                            padding: EdgeInsets.all(12),
-                            decoration: BoxDecoration(color: Colors.deepPurple),
+                            padding: const EdgeInsets.all(12),
+                            decoration:
+                                const BoxDecoration(color: Colors.deepPurple),
                             child: Text(
                               item.name,
-                              style: TextStyle(color: Colors.white ),
+                              style: const TextStyle(color: Colors.white),
                             )),
-                        child: Image.network(item.image),
-                        footer: Text(item.price.toString()),
+                        child: Image.network(
+                          item.image,
+                          fit: BoxFit.cover,
+                        ),
+                        footer: Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration:
+                                const BoxDecoration(color: Colors.black),
+                            child: Text(
+                              item.price.toString(),
+                              style: const TextStyle(color: Colors.white),
+                            )),
                       ));
                 },
                 itemCount: CatalogModel.items.length)
