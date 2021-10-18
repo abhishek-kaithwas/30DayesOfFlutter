@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/cart_page.dart';
 import 'package:flutter_application_1/utils/routes.dart';
+import 'package:flutter_application_1/widgets/themes.dart';
 
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
-
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,18 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: HomeClass(),
-      themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.poppins().fontFamily,
-        appBarTheme: const AppBarTheme(
-          color: Colors.white,
-          elevation: 0,
-          iconTheme: IconThemeData(color: Colors.black),
-          // ignore: deprecated_member_use
-          // textTheme: Theme.of(context). ,
-        ),
-      ),
+      themeMode: ThemeMode.system,
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.DarkTheme(context),
       debugShowCheckedModeBanner: false,
       initialRoute: "/login",
       routes: {
@@ -36,6 +27,7 @@ class MyApp extends StatelessWidget {
         // ignore: prefer_const_constructors
         MyRoutes.homeRoutes: (context) => HomePage(),
         MyRoutes.loginRoutes: (context) => const LoginPage(),
+        MyRoutes.CartRoute: (context) => const CartPage(),
       },
     );
   }

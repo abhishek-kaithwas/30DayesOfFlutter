@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/catlog.dart';
 import 'package:flutter_application_1/pages/home_detail_page.dart';
 import 'package:flutter_application_1/widgets/home_widgets/catalog_image.dart';
+// ignore: unused_import
+import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CatalogList extends StatelessWidget {
@@ -63,19 +65,17 @@ class CatalogItem extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {},
                       style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.grey.shade700),
                           shape:
                               MaterialStateProperty.all(const StadiumBorder())),
-                      child: "Buy".text.make(),
+                      child: "Add To Cart".text.make(),
                     )
                   ],
-                ).pOnly(right: 8.0)
+                ).pOnly(right: 4.0)
               ],
             ),
           ),
         ],
       ),
-    ).white.rounded.square(150).make().py16().w40(context);
+    ).color(context.cardColor).rounded.square(150).make().py16().w40(context);
   }
 }

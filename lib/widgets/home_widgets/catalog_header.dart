@@ -11,16 +11,17 @@ class CatalogHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       // ignore: prefer_const_literals_to_create_immutables
       children: [
-        const Text(
-          "Catalog App",
-          style: TextStyle(
-              fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-        const Text(
-          "Trending Products",
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
+        "Catalog App"
+            .text
+            .xl5
+            .bold
+            .color(Theme.of(context).colorScheme.primary)
+            .make(),
+        "Trending Products"
+            .text
+            .xl2
+            .color(Theme.of(context).colorScheme.primaryVariant)
+            .make(),
       ],
     );
   }

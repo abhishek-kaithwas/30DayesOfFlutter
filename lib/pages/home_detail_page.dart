@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -15,10 +16,13 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: Colors.blue.shade50,
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -30,8 +34,8 @@ class HomeDetailPage extends StatelessWidget {
                   backgroundColor:
                       MaterialStateProperty.all(Colors.grey.shade700),
                   shape: MaterialStateProperty.all(const StadiumBorder())),
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add To Cart".text.make(),
+            ).wh(120, 50)
           ],
         ).p32(),
       ),
@@ -49,15 +53,25 @@ class HomeDetailPage extends StatelessWidget {
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
-                  child: Column(
-                    children: [
-                      catalog.name.text.xl4.bold.color(Colors.blue).make(),
-                      catalog.desc.text.xl.color(Colors.teal).make(),
-                      10.heightBox,
-                    ],
-                  ).py64(),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        catalog.name.text.xl4.bold
+                            .color(Theme.of(context).colorScheme.primary)
+                            .make(),
+                        catalog.desc.text.xl
+                            .color(Theme.of(context).colorScheme.primaryVariant)
+                            .make(),
+                        10.heightBox,
+                        "Sit eos aliquyam lorem ipsum clita. Ipsum eirmod justo takimata diam ea takimata tempor nonumy rebum. Ipsum clita labore et takimata aliquyam diam diam dolore, et justo justo at stet dolores. Dolor voluptua ipsum accusam nonumy, stet eirmod erat gubergren magna tempor at sadipscing at, et gubergren sanctus dolores consetetur."
+                            .text
+                            .make()
+                            .p16(),
+                      ],
+                    ).py64(),
+                  ),
                 ),
               ),
             ),
